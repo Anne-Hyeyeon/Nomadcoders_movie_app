@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        const h3 = React.createElement(
+            "h3", //element 
+            { onMouseEnter: ()=> console.log("mouse enter")}, //property
+            "반가워요."); //content
+        //괄호 안에 있는 것은 HTML태그와 똑같은 이름이어야만 한다.
+        const btn = React.createElement("button",
+        { onClick: () => console.log("Im clicked."),
+         style: {
+            backgroundColor: "tomato",
+         }
+        }, 
+         "Click me"); 
+        const container = React.createElement("div",null, [h3, btn]);
+        ReactDOM.render(container, root);
+    </script>
+</html>

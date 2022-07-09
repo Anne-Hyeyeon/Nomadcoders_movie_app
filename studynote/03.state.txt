@@ -141,7 +141,7 @@ state / 60 (시로 바꾸기) 해준 다음
 onchange는 걸지 않는다.
 button 추가하고 onClick , 함수에는 setMinutes담긴다 (초기화. 값을 0으로 만들어줌)
 
-[2.7 State Practice Part Two]
+[3.7 State Practice Part Two]
 flip function 만들기
 (hours, minutes 각각 disabled 만들어주기)
 
@@ -190,3 +190,30 @@ value={flipped ? amount * 60 : amount}
 
 flip누르면 변화된 값 그대로 가져오므로
 onFlip 변수에 reset(); 넣어주기
+
+[3.8 Recap]
+flipped, setFlipped (useState)통한 토글버튼 구현!
+filpped는 false를 초기값으로 가지고 시작한다.
+그리고 function을 통해 flipped 값을 false 또는 true로 바꿔줌.
+
+flipped상태에 따라 disabled 상태 전환 가능.
+(disabled = {!flipped})
+
+사용자는 enable된 input에서 상태 변경 가능.
+onchange는 input에 입력한 값을 state에 전달함.
+
+flipped과 amount의 조합!
+value 값 나타내기 
+시->분단위로 변환할 때 (flipped가 true일 때) 삼항연산자로 보이는 값을 다르게 설정해준다.
+
+[3.9 Final Practice and Recap]
+함수, 컴포넌트를 복붙할 수 있을까? Yes!
+이제는 다양한 변환기를 선택할 수 있게 실전연습!
+
+return에 자바스크립트 넣으려면 {} 이용하기.
+
+정리하기
+1) select의 change event 리슨
+2) 유저가 숫자 선택하면, setIndex로 index state 변경
+3) 새로고침
+4) 새로고침 된 각 index에 맞는 결과를 보여줌

@@ -1,0 +1,52 @@
+[5.0] 
+create react app은 코드를 압축하고, 빠르게 하고.. 엄청 멋진 것!
+
+개발 서버 접근, 자동 새로고침, 어플 안에 css 즉각 포함 등... 수퍼 쿨한 것들이 아주 많대요!
+
+npx create-react-app my-app
+
+1. node.js 다운로드하기
+2. node-v 콘솔에 찍어보기
+3. npx 커맨드 실행 되는지 확인하기 - npx install
+4. package.json open하고 살펴보기
+5. npm start : 개발서버가 열린다!
+6. src : 모든 파일을 다 넣을 폴더들. 
+index.js를 살펴보자. create-react-app은 우리 어플을 가지고 index.html안에 넣어주도록 설정되어 있다.
+7. App도 jsx를 포함한 컴포넌트다!
+
+
+[5.1 Tour of CRA]
+creat react app의 위력을 살펴보자~
+마우스를 element위에 올려놔보자. 어떤 props를 필요로 하는ㄴ지 알 수 있다!
+
+특정 컴포넌트를 위한 css파일을 만들 수 있는 기능
+
+css에 대한 두 가지 선택지
+1. css 파일 만들기 (styles.css)
+해당 파일 import하기
+
+css를 굳이 index에만 넣을 필요는 없다!
+2. style prop 넣기
+
+cra 의 핵심은 분할하고 정복하는 것.
+
+자, 이제 CSS modules에 대해 알아보자!
+
+1. 모듈 파일 생성
+ex) Button.module.css
+
+2. import 하기
+import 이름 from "./모듈파일"
+className에 이름.클래스네임 주기.
+
+
+cra는 이렇게 super cool한 기능을 제공한다.
+컴포넌트를 나누고, 그 안의 css까지 잘게잘게 나누어 적용!
+
+이 경우, 랜덤으로 클래스명을 만들어준다 cra가!!!
+
+예를들면 <h1 class="App_title__YS7Xx">Welcome back!</h1>
+
+그래서 각각 다른 모듈에서 같은 클래스명을 써도 아~무 문제가 되지 않는다.
+
+컴포넌트,스타일 독립적으로 관리할 수 있는 리액트 기능~~
